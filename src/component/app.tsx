@@ -20,7 +20,7 @@ import { PageList } from './container/page_list';
 import * as PathUtils from 'path';
 import { PatternListContainer } from './container/pattern_list';
 import PatternsPane from '../lsg/patterns/panes/patterns-pane';
-import PreviewPane from '../lsg/patterns/panes/preview-pane';
+import { PreviewPaneWrapper } from '../component/container/preview_pane_wrapper';
 import * as ProcessUtils from 'process';
 import { ProjectList } from './container/project_list';
 import PropertyPane from '../lsg/patterns/panes/property-pane';
@@ -103,7 +103,7 @@ class App extends React.Component<AppProps> {
 							</PatternsPane>
 						</SideBar>
 
-						<PreviewPane />
+						<PreviewPaneWrapper />
 						<SideBar directionVertical hasPaddings>
 							<PropertyPane>
 								<PropertyList store={this.props.store} />
